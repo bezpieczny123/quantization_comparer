@@ -1,0 +1,46 @@
+name: quant_comparer
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # ZMIANA: Zmień 0.11.0 na 0.12.1
+  tflite_flutter: ^0.12.1
+
+  camera: ^0.10.5
+  image: ^4.0.17
+  permission_handler: ^11.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # --- POPRAWKA: Sekcja assets musi być TUTAJ, wcięta pod 'flutter' ---
+  assets:
+    - assets/fifth_dynamic_quant.tflite
+    - assets/fifth_float16_quant.tflite
+    - assets/fifth_integer_quant.tflite
+    - assets/baseline_dynamic_quant.tflite
+    - assets/baseline_float16_quant.tflite
+    - assets/baseline_integer_quant.tflite
+    - assets/forth_dynamic_quant.tflite
+    - assets/forth_float16_quant.tflite
+    - assets/forth_integer_quant.tflite
+    - assets/second_dynamic_quant.tflite
+    - assets/second_float16_quant.tflite
+    - assets/second_integer_quant.tflite
+    - assets/forth_model.tflite
+    - assets/second_model.tflite
+    - assets/baseline_model.tflite
+    - assets/fifth_model.tflite
+    - assets/labels.txt
