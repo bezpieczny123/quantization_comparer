@@ -104,7 +104,7 @@ class _CameraClassifierScreenState extends State<CameraClassifierScreen> {
     _runInferenceBackground(frameData);
   }
 
-  Future<void> _runInferenceBackground(CameraFrameData frameData) async {
+  void _runInferenceBackground(CameraFrameData frameData) async {
     try {
       // 1. Convert YUV to RGB in background
       final convertedImage = await compute(convertYUV420ToImage, frameData);
@@ -124,7 +124,7 @@ class _CameraClassifierScreenState extends State<CameraClassifierScreen> {
     } catch (e) {
       print("Error processing frame: $e");
     } finally {
-      if (mounted) _isProcessing = false;
+      _isProcessing = false;
     }
   }
 
